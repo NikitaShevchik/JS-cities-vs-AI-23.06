@@ -29,9 +29,6 @@
             line-height: 1.4;
             font-size: 20px;
             padding: 0 5px;
-            &:disabled{
-                background-color: #3333;
-            }
 		}
 		&__output {
             padding: 20px 0;
@@ -54,7 +51,6 @@
 }
 @keyframes invalidCity {
     0%{
-
     }
     25%{
         border: 2px solid rgb(255, 0, 0);
@@ -71,15 +67,11 @@
     100%{
     }
 }
-
-
-
 .city__name{
     display: inline-block;
     text-decoration: underline;
     text-transform: capitalize;
 }
-
 .city__success{
     position: absolute;
     top: -49px;
@@ -88,7 +80,6 @@
     font-weight: 700;
     animation: opacityGreen 1s ease;
 }
-
 @keyframes opacityGreen {
     0%{
         opacity: 0;
@@ -106,4 +97,3 @@
     }
     
 }
-
