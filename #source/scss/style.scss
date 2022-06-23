@@ -19,7 +19,6 @@
 		&__form {
             position: relative;
 		}
-
 		&__input {
             position: absolute;
             top: 0;
@@ -30,12 +29,14 @@
             line-height: 1.4;
             font-size: 20px;
             padding: 0 5px;
+            &:disabled{
+                background-color: #3333;
+            }
 		}
 		&__output {
             padding: 20px 0;
             width: 250px;
 		}
-
 		&__message {
             display: block;
             justify-self: flex-start;
@@ -48,11 +49,9 @@
             line-height: 1.4;
 		}
 }
-
 .cities__input._incorrect{
     animation: invalidCity 0.3s ease-in;
 }
-
 @keyframes invalidCity {
     0%{
 
@@ -107,3 +106,4 @@
     }
     
 }
+

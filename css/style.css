@@ -117,6 +117,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 5px;
 }
 
+.cities__input:disabled {
+  background-color: #3333;
+}
+
 .cities__output {
   padding: 20px 0;
   width: 250px;
