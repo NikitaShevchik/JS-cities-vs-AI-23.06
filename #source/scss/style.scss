@@ -1,5 +1,109 @@
 // Обнуление стилей
 @import "nullstyle.scss";
 // Подключение шрифтов
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 //SCSS
+.main {
+    font-family: 'Rubik', sans-serif;
+}
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.cities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+		&__form {
+            position: relative;
+		}
+
+		&__input {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translate(50%, -100%);
+            width: 250px;
+            border: 1px solid #000;
+            line-height: 1.4;
+            font-size: 20px;
+            padding: 0 5px;
+		}
+		&__output {
+            padding: 20px 0;
+            width: 250px;
+		}
+
+		&__message {
+            display: block;
+            justify-self: flex-start;
+            align-self: flex-start;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.4;
+		}
+}
+
+.cities__input._incorrect{
+    animation: invalidCity 0.3s ease-in;
+}
+
+@keyframes invalidCity {
+    0%{
+
+    }
+    25%{
+        border: 2px solid rgb(255, 0, 0);
+        transform: translate(45%, -100%);
+    }
+    50%{
+        transform: translate(50%, -100%);
+        border: 2px solid rgb(255, 0, 0);
+    }
+    75%{
+        border: 2px solid rgb(255, 0, 0);
+        transform: translate(55%, -100%);
+    }
+    100%{
+    }
+}
+
+
+
+.city__name{
+    display: inline-block;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.city__success{
+    position: absolute;
+    top: -49px;
+    font-size: 20px;
+    left: 6px;
+    font-weight: 700;
+    animation: opacityGreen 1s ease;
+}
+
+@keyframes opacityGreen {
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    80%{
+        color: rgb(0, 255, 34);
+    }
+    100%{
+        top: 10px;
+        left: 6px;
+        opacity: 0;
+    }
+    
+}
